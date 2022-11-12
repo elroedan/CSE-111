@@ -1,9 +1,13 @@
 import csv
+
 def main():
     
-    read_dict('students.csv')
-
-
+    dictionary = read_dict('students.csv')
+    # print(dictionary)
+    i_number = input("What is your I-Number? ")
+    get_student(i_number, dictionary)
+    
+    
 
 def read_dict(filename):
     """Read the contents of a CSV file into a
@@ -25,17 +29,14 @@ def read_dict(filename):
             dictionary[k] = v
     
     return dictionary
-            
 
-def read_dict(filename, key_column_index):
-    """Read the contents of a CSV file into a compound
-    dictionary and return the dictionary.
+def get_student(i_number, filename ):
+    if i_number in filename:
+        print(filename[i_number])
+    else:
+        print("No such student")
 
-    Parameters
-        filename: the name of the CSV file to read.
-        key_column_index: the index of the column
-            to use as the keys in the dictionary.
-    Return: a compound dictionary that contains
-        the contents of the CSV file.
-    """
-main()
+    
+
+if __name__ == "__main__":
+    main()
