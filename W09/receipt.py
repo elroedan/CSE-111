@@ -13,6 +13,7 @@ def main():
         reader = csv.reader(file)
         next(reader)
         print()
+        print('Requested item:')
         for rows in reader:
             k, v = rows
             if k in product_dictionary:
