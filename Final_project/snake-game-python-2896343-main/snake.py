@@ -1,0 +1,16 @@
+from turtle import *
+
+color('red')
+forward(100)
+right(60)
+forward(100)
+right(60)
+forward(100)
+right(60)
+forward(100)
+right(60)
+forward(100)
+right(60)
+forward(100)
+right(60)
+done()
